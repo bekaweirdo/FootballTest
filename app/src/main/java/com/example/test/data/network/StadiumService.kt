@@ -11,7 +11,7 @@ interface StadiumService {
     fun getStadiums(): Call<StadiumsResponse>
 
     companion object Factory {
-        val BASE_URL = "http://www.mocky.io/"
+        private const val BASE_URL = "http://www.mocky.io/"
         fun create(): StadiumService {
             val retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)

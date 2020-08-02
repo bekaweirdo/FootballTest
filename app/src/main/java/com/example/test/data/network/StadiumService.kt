@@ -7,11 +7,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 
 interface StadiumService {
-    @GET("5b9264193300006b00205fb9")
+    @GET("v2/5b9264193300006b00205fb9")
     fun getStadiums(): Call<StadiumsResponse>
 
     companion object Factory {
-        val BASE_URL = "http://www.mocky.io/v2/"
+        val BASE_URL = "http://www.mocky.io/"
         fun create(): StadiumService {
             val retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)

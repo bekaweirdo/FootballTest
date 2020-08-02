@@ -6,8 +6,9 @@ import com.example.test.data.network.StadiumService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
-class DataRepository(val stadiumService: StadiumService){
+class DataRepository @Inject constructor(val stadiumService: StadiumService){
 
     fun getStadiums(stadiumData: IStadiumData){
         stadiumService.getStadiums().enqueue(object: Callback<StadiumsResponse>{

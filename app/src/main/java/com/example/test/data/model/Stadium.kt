@@ -10,7 +10,7 @@ data class Stadium(
     @SerializedName("matchTime")
     val matchTime: Double,
     @SerializedName("matchDate")
-    val matchDate: Long,
+    val matchDate: String,
     @SerializedName("stadiumAdress")
     val stadiumAddress: String,
     @SerializedName("matchSummary")

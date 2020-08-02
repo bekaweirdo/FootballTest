@@ -4,5 +4,5 @@ import com.google.gson.annotations.SerializedName
 
 data class MatchSummary(
     @SerializedName("summaries")
-    val summaries: ArrayList<Int>
+    val summaries: ArrayList<Summary>
 )

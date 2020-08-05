@@ -3,6 +3,7 @@ package com.example.test.di.component
 import android.content.Context
 import com.example.test.MainActivity
 import com.example.test.di.module.AppModule
+import com.example.test.ui.matches.MatchesFragment
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -17,4 +18,5 @@ interface AppComponent {
     }
 
     fun inject(mainActivity: MainActivity)
+    fun inject(matchesFragment: MatchesFragment)
 }

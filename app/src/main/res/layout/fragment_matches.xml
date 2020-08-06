@@ -51,11 +51,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.4" />
             <ImageView
-                android:id="@+id/Team1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/TeamImage1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:src="@drawable/ic_launcher_foreground" />
 
             <View
@@ -81,11 +84,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.4" />
             <ImageView
-                android:id="@+id/Team2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/TeamImage2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:src="@drawable/ic_launcher_foreground" />
 
             <View
@@ -104,14 +110,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="0dp"
-        android:layout_height="35dp"
-        android:background="@drawable/rounded_corner"
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
@@ -120,25 +126,57 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="left"
+            android:id="@+id/TeamName1"
             android:paddingTop="6dp"
-            android:gravity="center"
-            android:text="Overview"/>
+            android:text="Barcelona" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:id="@+id/TeamName2"
+            android:gravity="right"
             android:paddingTop="6dp"
-            android:gravity="center"
-            android:text="Statistic"/>
+            android:text="Huesca" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rounded_corner"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingTop="6dp"
             android:gravity="center"
-            android:text="Line up"/>
+            android:paddingTop="6dp"
+            android:text="Overview" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="6dp"
+            android:text="Statistic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="6dp"
+            android:text="Line up" />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/linearLayout4"

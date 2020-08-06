@@ -1,7 +1,9 @@
 package com.example.test.ui.viewmodel
 
 import android.util.Log
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import com.example.test.data.model.StadiumsResponse
 import com.example.test.repository.DataRepository

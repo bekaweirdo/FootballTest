@@ -6,4 +6,6 @@
     <color name="mainColor">#00AA7B</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="transparentColor">#F6F6F6</color>
+    <color name="teamBallPossession2">#FF7A7D</color>
+    <color name="teamBallPossession1">#0074EF</color>
 </resources>

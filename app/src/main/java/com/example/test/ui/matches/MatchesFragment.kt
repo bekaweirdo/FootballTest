@@ -1,6 +1,8 @@
 package com.example.test.ui.matches
 
 import android.content.Context
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -17,6 +19,9 @@ import com.example.test.data.model.StadiumsResponse
 import com.example.test.ui.StadiumViewModelFactory
 import com.example.test.ui.viewmodel.StadiumViewModel
 import kotlinx.android.synthetic.main.fragment_matches.*
+import java.lang.Exception
+import java.text.SimpleDateFormat
+import java.util.*
 import javax.inject.Inject
 
 class MatchesFragment : Fragment() {
@@ -54,6 +59,20 @@ class MatchesFragment : Fragment() {
         Glide.with(this)
             .load(data.results.team2.teamImage)
             .into(TeamImage2)
+        BallPossessionBar.progress = data.results.team1.ballPosition
+        BallPossession1.text = data.results.team1.ballPosition.toString() + '%'
+        BallPossession2.text = data.results.team2.ballPosition.toString() + '%'
+        currentTime.text = data.results.matchTime.toInt().toString()
+        getDate(data.results.matchDate)
+    }
+    private fun getDate(dateStr: Long){
+        try {
+            Log.d("FATAL",dateStr.toString())
+            val dateFormat = SimpleDateFormat("EEE, d MMM yyyy", Locale.getDefault())
+            dateFormat.parse("2006-04-16")
+        }catch (e: Exception){
+            e.printStackTrace()
+        }
     }
     override fun onAttach(context: Context) {
         super.onAttach(context)

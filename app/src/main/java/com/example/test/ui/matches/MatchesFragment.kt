@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -46,6 +47,7 @@ class MatchesFragment : Fragment() {
         stadiumViewModel.getStadiums()
         stadiumViewModel.listOfStadiums.observe(viewLifecycleOwner, Observer {data->
             populateViews(data)
+            progressbar.visibility = View.GONE
         })
     }
     private fun populateViews(data: StadiumsResponse){
@@ -53,6 +55,7 @@ class MatchesFragment : Fragment() {
         TeamName2.text = data.results.team2.teamName
         score1.text = data.results.team1.score.toString()
         score2.text = data.results.team2.score.toString()
+        matchStadium.text = data.results.stadiumAddress
         Glide.with(this)
             .load(data.results.team1.teamImage)
             .into(TeamImage1)

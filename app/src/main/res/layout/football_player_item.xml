@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/PlayerImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintEnd_toStartOf="@+id/GoalType"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/GoalType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:paddingLeft="10dp"
+                android:text="Goals by"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/GoalPlayer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/PlayerImage" />
+
+            <TextView
+                android:id="@+id/GoalMinute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="16'"
+                app:layout_constraintEnd_toStartOf="@+id/GoalType"
+                app:layout_constraintStart_toEndOf="@+id/PlayerImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/GoalPlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Messi L."
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/GoalMinute"
+                app:layout_constraintTop_toBottomOf="@+id/GoalMinute" />
+
+            <ImageView
+                android:id="@+id/PlayerActionType"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="33dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="fill_parent"
+            android:background="#FF0000FF" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layoutDirection="rtl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/PlayerImage2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_marginEnd="33dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintEnd_toStartOf="@+id/GoalType2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/GoalType2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:paddingLeft="10dp"
+                android:text="Goals by"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/GoalPlayer2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/PlayerImage2" />
+
+            <TextView
+                android:id="@+id/GoalMinute2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="16'"
+                app:layout_constraintEnd_toStartOf="@+id/GoalType2"
+                app:layout_constraintStart_toEndOf="@+id/PlayerImage2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/GoalPlayer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Messi L."
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/GoalMinute2"
+                app:layout_constraintTop_toBottomOf="@+id/GoalMinute2" />
+
+            <ImageView
+                android:id="@+id/PlayerActionType2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="33dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

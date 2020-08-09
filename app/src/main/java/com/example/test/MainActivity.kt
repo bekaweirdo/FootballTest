@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadData(){
-        progressBar = findViewById(R.id.progressBar)
         val apiService = StadiumService.create()
         apiService.getStadiums()
         stadiumViewModel.getStadiums()
